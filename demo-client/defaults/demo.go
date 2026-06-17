@@ -36,7 +36,10 @@ func DefaultSettings() Settings {
 		Context:                 context.Background(),
 	}
 	if len(settings.ServerName) == 0 {
-		settings.ServerName = "demo.bintoca.net"
+		settings.ServerName = "localhost"
+	}
+	if len(settings.CustomCertAuthorityPath) == 0 {
+		settings.CustomCertAuthorityPath = "../connection/test-certs/ed25519/ca.cert"
 	}
 	if len(settings.KeyManagerPath) == 0 {
 		settings.KeyManagerPath = "./key_manager.json"

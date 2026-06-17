@@ -61,6 +61,21 @@ func DefaultSettings() Settings {
 		Context:        context.Background(),
 		Config:         connection.ConnectionConfig{},
 	}
+	if len(settings.ServerHostName) == 0 {
+		settings.ServerHostName = "localhost"
+	}
+	if len(settings.CertPath) == 0 {
+		settings.CertPath = "../connection/test-certs/ed25519/end.fullchain"
+	}
+	if len(settings.PrivKeyPath) == 0 {
+		settings.PrivKeyPath = "../connection/test-certs/ed25519/end.key"
+	}
+	if len(settings.ListenAddr) == 0 {
+		settings.ListenAddr = "127.0.0.1:443"
+	}
+	if len(settings.StoragePath) == 0 {
+		settings.StoragePath = "./bdb"
+	}
 	return settings
 }
 func DefaultRouteFunc(storagePath string, serverHostName string) (func(rr *dbp.RequestResponse, ctx context.Context) error, data.BadgerStorage) {

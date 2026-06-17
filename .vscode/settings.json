@@ -4,6 +4,7 @@
         "bintoca",
         "Datagrams",
         "Dbuf",
+        "fullchain",
         "godotenv",
         "joho"
     ]
