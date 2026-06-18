@@ -1,6 +1,6 @@
 # dbuf-demo-go
 
-A proof of concept implementation of the DBUF protocol.
+A proof of concept implementation of the [DBUF protocol](https://github.com/bintoca/dbuf).
 
 ### Run the server
 ```
